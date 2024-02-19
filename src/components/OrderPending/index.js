@@ -62,8 +62,6 @@ class OrderPending extends Component {
 
   onSearching = event => this.setState({searchValue: event.target.value})
 
-  // const filtered = orderDetails.filter(eachItem => eachItem.customer.toLowerCase().includes(searchValue.toLowerCase()))
-
   render() {
     const {searchValue} = this.state
 

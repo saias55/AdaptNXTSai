@@ -3,6 +3,8 @@ import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import SlideBar from './components/SlideBar'
 import Navbar from './components/Navbar'
 import OrderPage from './components/OrderPage'
+import NotFound from './components/NotFound'
+import ProgressPage from './components/ProgressPage'
 
 import './App.css'
 
@@ -12,11 +14,17 @@ const App = () => (
       <Navbar />
       <div className="page-body">
         <SlideBar />
-        <Switch>
-          <div className="content">
+        <div className="content">
+          <Switch>
             <Route exact path="/" component={OrderPage} />
-          </div>
-        </Switch>
+
+            <Route exact path="/DashBoard" component={ProgressPage} />
+            <Route exact path="/Inventory" component={ProgressPage} />
+            <Route exact path="/Shipping" component={ProgressPage} />
+            <Route exact path="/Channel" component={ProgressPage} />
+            <Route component={NotFound} />
+          </Switch>
+        </div>
       </div>
     </div>
   </BrowserRouter>
