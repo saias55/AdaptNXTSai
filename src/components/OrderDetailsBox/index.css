@@ -1,0 +1,21 @@
+.logo-image-details {
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+}
+
+.space {
+  margin-left: 20px;
+}
+
+.pending-button {
+  color: green;
+  margin-top: 20px;
+  height: 30px;
+  border: 1px solid green;
+  background-color: transparent;
+}
+
+.margin-botton {
+  margin-bottom: 20px;
+}

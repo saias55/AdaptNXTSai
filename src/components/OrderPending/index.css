@@ -1,0 +1,147 @@
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-pending-bgc {
+  background-color: white;
+  margin-top: 50px;
+  min-height: 150px;
+  padding: 30px;
+}
+
+.order-pending-button-details {
+  height: 30px;
+  width: 120px;
+  margin-right: 20px;
+}
+
+.contacts-table {
+  padding-left: 0;
+  margin-top: 48px;
+}
+
+.table-header {
+  display: flex;
+  background-color: #f1f5f9;
+  list-style-type: none;
+  border: 1px solid #cbd5e1;
+}
+
+.table-header-cell {
+  color: #334155;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 32px;
+}
+
+.name-column {
+  width: 33%;
+  border-right: none;
+}
+
+.separator {
+  margin: 0;
+  border: 1px solid #cbd5e1;
+}
+
+.pending-unordered-details {
+  list-style: none;
+}
+
+.check-channel-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+  margin-right: 30px;
+}
+
+.li-Ittems-flex {
+  display: flex;
+}
+
+.order-date-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+  margin-right: 30px;
+  margin-top: 17px;
+}
+
+.customer-date-flex {
+  display: flex;
+  justify-content: space-between;
+  width: 15%;
+  margin-right: 30px;
+}
+
+.li-items-flex {
+  display: flex;
+}
+
+.display-flex-1 {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.display-flex-2 {
+  width: 12%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.display-flex-3 {
+  width: 8%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.display-flex-4 {
+  width: 8%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.display-flex-5 {
+  width: 13%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.display-flex-6 {
+  width: 9%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.display-flex-7 {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.display-flex-8 {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.icon-details-size {
+  margin-top: 18px;
+}
+
+.min-heigh {
+  height: 300px;
+  overflow-y: scroll;
+  flex-grow: 1;
+}
