@@ -55,19 +55,92 @@ const orderDetails = [
     customer: 'ragava',
     orderValue: '100',
   },
+  {
+    id: 11,
+    orderNo: 2188888,
+    orderDate: '20-2-2022',
+    city: 'lucknow',
+    customer: 'suresh kumar',
+    orderValue: '100',
+  },
+  {
+    id: 21,
+    orderNo: 2188888,
+    orderDate: '20-2-2022',
+    city: 'lucknow',
+    customer: 'vinay kumar',
+    orderValue: '100',
+  },
+  {
+    id: 31,
+    orderNo: 210000,
+    orderDate: '20-2-2022',
+    city: 'lucknow',
+    customer: 'rajraj',
+    orderValue: '100',
+  },
+  {
+    id: 41,
+    orderNo: 210000,
+    orderDate: '20-2-2022',
+    city: 'lucknow',
+    customer: 'donade',
+    orderValue: '100',
+  },
+  {
+    id: 51,
+    orderNo: 210000,
+    orderDate: '20-2-2022',
+    city: 'lucknow',
+    customer: 'hello',
+    orderValue: '100',
+  },
+  {
+    id: 61,
+    orderNo: 210000,
+    orderDate: '20-2-2022',
+    city: 'lucknow',
+    customer: 'hiiii',
+    orderValue: '100',
+  },
 ]
 
 class OrderPending extends Component {
-  state = {searchValue: ''}
+  state = {searchValue: '', start: 0, end: 5, num: 1}
 
   onSearching = event => this.setState({searchValue: event.target.value})
 
+  increasingEnd = () => {
+    const len = orderDetails.length
+    const {end} = this.state
+    if (end < len) {
+      this.setState(prevState => ({end: prevState.end + 5}))
+      this.setState(prevState => ({start: prevState.start + 5}))
+      this.setState(prevState => ({num: prevState.num + 1}))
+    }
+  }
+
+  decreasingEnd = () => {
+    const {start} = this.state
+    if (start >= 1) {
+      this.setState(prevState => ({end: prevState.end - 5}))
+      this.setState(prevState => ({start: prevState.start - 5}))
+      this.setState(prevState => ({num: prevState.num - 1}))
+    }
+  }
+
   render() {
-    const {searchValue} = this.state
+    const {searchValue, start, end, num} = this.state
+    console.log(start)
+    console.log(end)
 
     const filtered = orderDetails.filter(eachItem =>
       eachItem.customer.toLowerCase().includes(searchValue.toLowerCase()),
     )
+
+    const somee = filtered.slice(start, end)
+    console.log(somee)
+
     return (
       <div className="order-pending-bgc">
         <div className="space-between">
@@ -146,13 +219,17 @@ class OrderPending extends Component {
             </div>
           </li>
           <hr />
-          {filtered.map(eachOrder => (
+          {somee.map(eachOrder => (
             <OrderDetailsBox eachOrder={eachOrder} key={eachOrder.id} />
           ))}
         </ul>
         <hr />
         <div className="display-end">
-          <PageSection />
+          <PageSection
+            increasingEnd={this.increasingEnd}
+            num={num}
+            decreasingEnd={this.decreasingEnd}
+          />
         </div>
       </div>
     )
